@@ -44,6 +44,7 @@
 
 html {
   background-color: var(--lt-background-color);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -93,7 +94,7 @@ h2 {
 
 h3 {
   font-family: adelle-sans-light;
-  font-size: 14px;
+  font-size: calc(10px + 0.2rem);
   line-height: 18px;
   letter-spacing: .11em;
   text-transform: uppercase;
@@ -136,6 +137,7 @@ a:after {
 
 #page-title {
   font-family: adelle-sans-light;
+  color: var(--med-font-color);
   font-size: 22px; 
   line-height: 22px;
   letter-spacing: .11em;
@@ -143,14 +145,15 @@ a:after {
   text-align: right;
 
   position: fixed;
-  right: calc(8vw + 5vh - 20px);
-  top: calc(5vh - 20px);
+  top: 3vw;
+  right: 11vw;
+  z-index: 1000;
 }
 
 #identity {
   font-family: adelle-sans-bold;
+  letter-spacing: 0.02em;
 }
-
 
 #sidebar {
   position: fixed;

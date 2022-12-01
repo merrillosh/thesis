@@ -2,8 +2,9 @@
   position: absolute;
   width: 92vw;
   left: 0;
-  top: 0;
   margin-right: 8vw;
+  padding-top: 10vh;
+  min-width: 900px;
 
   background-color: var(--background-color);
 }
@@ -34,14 +35,15 @@
   padding-right: 7vw;
   width: 78vw;
   max-width: 1920px;
+  min-width: 800px;
   flex: 0 0 auto;
   flex-basis: 78vw;
 
-  padding-bottom: 3rem;
+  padding-bottom: calc(2.5rem + 50px);
 }
 
 .full-width-row {
-  padding-top: 2.5rem;
+  padding-top: 0rem;
 
   padding-left: 0px;
   margin-right: 0;
@@ -50,8 +52,10 @@
   flex: 0 0 auto;
   flex-basis: 92vw;
 
-  padding-bottom: 3rem;
+  padding-bottom: 0rem;
 }
+
+/* Problem Section */
 
 .column-2-3 {
   padding-left: 0;
@@ -73,18 +77,6 @@
   text-align:justify;
 }
 
-.column-1-3-each {
-  padding-left: 0;
-  margin-right: 50px; /*change to 0 for right-hand column*/
-  width: calc(33.333% - 100px);
-  max-width: calc(33.333% - 100px);
-  flex: 0 0 auto;
-  flex-basis: calc(33.333% - 100px);
-  text-align:justify;
-}
-
-/***********/
-
 #header-img {
   padding-left: 0;
   margin-right: 0; /*change to 0 for right-hand column*/
@@ -96,12 +88,10 @@
   float: right;
 }
 
+/* Objectives Section */
+
 #objectives-section {
   background-color: var(--lt-background-color);
-}
-
-#objectives-section .obj {
-  margin-right: 30px;
 }
 
 #objectives-section .num {
@@ -120,4 +110,51 @@
 
 #obj-3 {
   color: var(--lt-blue);
+}
+
+/* Process Section */
+
+.photo-frame {
+  padding: 0 0;
+  margin: 0;
+}
+
+/* carousel */
+
+.carousel-cell {
+  /* aspect ratio: 1920 x 1309 */
+  width: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.carousel-cell img {
+  width: 100%;
+  height: auto;
+}
+
+.flickity-button {
+  background: transparent;
+  color: black;
+  width: 30px;
+}
+
+.flickity-button:hover {
+  background: transparent;
+}
+
+.flickity-prev-next-button.previous {
+  left: -35px;
+}
+.flickity-prev-next-button.next {
+  right: -35px;
+}
+
+.flickity-page-dots {
+  display: none;
+}
+
+#prototype-section {
+  background-color: var(--lt-background-color);
+  color: var(--med-font-color);
 }

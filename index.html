@@ -4,49 +4,61 @@
   <meta charset="UTF-8">
   <title>The Identity Transcript - Merrill O'Shaughnessy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <script src="script.js"></script>
+  
   <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script> 
+  <link rel="stylesheet" href="flickity.css" media="screen">
+  <script src="flickity.pkgd.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="content-style.css">
   <style></style>
 </head>
 <body>
+  <section id="title-section">
+    <div id="page-title" >
+      The <w id="identity">Identity</w><br>Transcript
+    </div>
+  </section>
+
   <!--Sidebar Nav Structure-->
   <section id="sidebar">
-    <div id="page-title">The <w id="identity">Identity</w><br>Transcript</div>
     <div id="sidebar-line-cover"></div>
-    <div id="sidebar-menu-button">
-      <a href="#" target="research paper">
-        <object data="./img/menu-icon.svg" width="40px" style="pointer-events: none"></object>
+    <div id="sidebar-menu-button" style="z-index: 1001;">
+      <a href="#" target="open menu" id="menu-button-link">
+        <object data="./img/menu-icon.svg" width="40%" style="pointer-events: none"></object>
       </a>
     </div>
     <div id="sidebar-menu-items">
       <ul id="sidebar-menu">
         <li id="sb-menu-1">
-          <a href="" class="sidebar-menu-item"><h3>Problem</h3></a>
+          <a href="#title-section" class="sidebar-menu-item"><h3>Problem</h3></a>
         </li>
         <li id="sb-menu-2">
-          <a href="" class="sidebar-menu-item"><h3>Prototype</h3></a>
+          <a href="#prototype-section" class="sidebar-menu-item"><h3>Prototype</h3></a>
         </li>
         <li id="sb-menu-3">
-          <a href="" class="sidebar-menu-item"><h3>Testing</h3></a>
+          <a href="#testing-section" class="sidebar-menu-item"><h3>Testing</h3></a>
         </li>
         <li id="sb-menu-4">
-          <a href="" class="sidebar-menu-item"><h3>Conclusions</h3></a>
+          <a href="#conclusions-section" class="sidebar-menu-item"><h3>Conclusions</h3></a>
         </li>
       </ul>
     </div>
     <div id="sidebar-links">
       <a href="#" target="research paper">
-        <object data="./img/paper-icon.svg" width="20px" style="pointer-events: none"></object>
+        <object data="./img/paper-icon.svg" width="30%" style="pointer-events: none"></object>
       </a>
       <a href="#" target="interactive transcript">
-        <object data="./img/interactive-icon.svg" width="20px" style="pointer-events: none;"></object>
+        <object data="./img/interactive-icon.svg" width="30%" style="pointer-events: none;"></object>
       </a>
     </div>
   </section>
   <sections id="main-content">
-    <section id="problem-section" style="margin-top: 7vh;">
+
+    <section id="problem-section" style="color: var(--lt-font-color);">
+      
       <div class="content-row row">
         <div class="column-2-3 column">
           <h1>The Problem</h1><br>
@@ -60,34 +72,208 @@
           <img id="header-img" src="./img/header-img.jpg" alt="an overhead view of students or employees working on their laptops, snacking, and texting at a large table" width="420" height="315">
         </div>
       </div>
+
     </section>
+
     <section id="objectives-section">
       <div class="full-width-row row">
-        <!--<h1>Design Objectives</h1>-->
-        <div id="ob-1" class="column obj" style="margin-left: 50px; width: 33.333%;">
-          <div class="row">
-            <div id="obj-1" class="column num" style="margin-right: 0; width: 33.333%;">1</div>
-            <div class="column" style="margin-right: 0; width: 66.666%">
-              <h1>Identity</h1><br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <div class="content-row row" style="padding-bottom: calc(2.5rem + 120px);"> 
+
+          <div id="ob-1" class="column obj" style="width: 33.333%;">
+            <div class="row" style="padding-left: 5%; padding-right: 5%; width: 90%;">
+              <div id="obj-1" class="column num" style="width: 25%;">1</div>
+              <div class="column" style="width: 75%; top: 80px;">
+                <h1 style="white-space: nowrap;">Identity</h1><br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div id="ob-2" class="column obj" style="width: 33.333%;">
-          <div id="obj-2" class="column num">2</div>
-          <div class="column">
-            <h1>Authenticity</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+          
+          <div id="ob-2" class="column obj" style="width: 33.333%;">
+            <div class="row" style="padding-left: 5%; padding-right: 5%; width: 90%;">
+              <div id="obj-2" class="column num" style="width: 25%;">2</div>
+              <div class="column" style="width: 75%; top: 80px;">
+                <h1 style="white-space: nowrap;">Authenticity</h1><br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div id="ob-3" class="column obj" style="margin-right: 50px; width: 33.333%;">
-          <div id="obj-3" class="column-1-2 column num">3</div>
-          <div class="column-1-2 column">
-            <h1>Efficiency</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
+          <div id="ob-3" class="column obj" style="width: 33.333%;">
+            <div class="row" style="padding-left: 5%; padding-right: 5%; width: 90%;">
+              <div id="obj-3" class="column num" style="width: 25%;">3</div>
+              <div class="column" style="width: 75%; top: 80px;">
+                <h1 style="white-space: nowrap;">Efficiency</h1><br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+              </div>
+            </div>
           </div>
+
         </div>
+      </div>
     </section>
+
+    <section id="process-section" style="color: var(--lt-font-color);">
+     
+      <div class="content-row row" style="padding-top: calc(2.5rem + 60px); padding-bottom: 2.5rem;">
+        <div class="column">
+          <h1>Personas</h1><br>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.</h2>
+            <div class="row" style="padding-top: 0; margin-top: 40px; display: block;">
+              <div class="photo-frame" style="background-color: white; width: calc(78vw);">
+                <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": false}'>
+                  <div class="carousel-cell">
+                    <img src="./img/personas1.png">
+                  </div>
+                  <div class="carousel-cell">
+                    <img src="./img/personas2.png">
+                  </div>
+                  <!--<div class="carousel-cell">
+                    <img src="../img/personas3.png">s
+                  </div>-->
+                  <!--<div class="carousel-cell">
+                    <img src=".../img/personas4.png">
+                  </div>-->
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="content-row row" style="padding-top: calc(2.5rem)">
+        <div class="column" style="float:right; text-align: right;">
+          <h1>Prototypes</h1><br>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.</h2>
+            <div class="row">
+              <div class="column" style="width: 25%">
+
+              </div>
+              <div class="column" style="width: 25%">
+                
+              </div>
+              <div class="column" style="width: 50%">
+                
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prototype-section">
+      <div class="content-row row" style="padding-top: calc(2.5rem + 60px); padding-bottom: 2.5rem;">
+        <div class="column">
+        </div>
+      </div>
+    
+    </section>
+
+    <section id="testing-section">
+      <div class="content-row row" style="padding-top: calc(2.5rem + 60px); padding-bottom: 2.5rem;">
+        <div class="column" style="width: 100%;">
+          
+          <div id="tst-header" class="row0 row" style="width: 100%;">
+            <div class="col1 column" style="width: 50%;"></div>
+            <div class="col2 column" style="width: 50%;"><h2>Testing Plan</h2></div>
+          </div>
+          
+          <div id="tst1" class="row1 row" style="width: 100%;">
+            <div class="col1 column" style="width: 50%;">
+              <div class="row">
+                <div class="column num" style="width: 25%;">A</div>
+                <div class="column" style="width: 75%; top: 80px;">
+                  <h1 style="white-space: nowrap;">Students</h1><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col2 column" style="width: 50%;">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.</p><br>
+              <p>Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            </div>
+          </div>
+
+          <div id="tst2" class="row2 row" style="width: 100%;">
+            <div class="col1 column" style="width: 50%;">
+              <div class="row">
+                <div class="column num" style="width: 25%;">B</div>
+                <div class="column" style="width: 75%; top: 80px;">
+                  <h1 style="white-space: nowrap;">Parents/Guardians</h1><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col2 column" style="width: 50%;">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.</p><br>
+              <p>Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            </div>
+          </div>
+
+          <div id="tst3" class="row3 row" style="width: 100%;">
+            <div class="col1 column" style="width: 50%;">
+              <div class="row">
+                <div class="column num" style="width: 25%;">C</div>
+                <div class="column" style="width: 75%; top: 80px;">
+                  <h1 style="white-space: nowrap;">Admissions Officers</h1><br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col2 column" style="width: 50%;">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.</p><br>
+              <p>Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            </div>
+          </div>
+            
+          
+        </div>
+        <div class="column" style="width: 50%; padding-right: 25px;">
+
+        </div>
+      </div>
+    </section>
+
   </sections>
 </body>
+  <script>
+
+    
+    
+    
+    gsap.registerPlugin(ScrollTrigger);
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "body",
+        start: "top top",
+        endTrigger: "#page-title",
+        end: "top top",
+        scrub: true,
+        markers: false
+      }
+    })
+
+    tl
+    .to('#page-title', {
+          opacity: 0
+    });
+
+    let menuButton = document.querySelector('#sidebar-menu-button');
+
+    menuButton.addEventListener("mouseenter", () => { 
+      gsap.to('#page-title', {
+        opacity: 1,
+        x: -50,
+        y: 10
+      })
+    });
+
+    menuButton.addEventListener("mouseleave", () => { 
+      gsap.to('#page-title', {
+        opacity: 0,
+        x: 100,
+        y: -10
+      })
+    });
+
+  </script>
 </html>
