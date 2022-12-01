@@ -17,18 +17,17 @@
 </head>
 <body>
   <section id="title-section">
-    <div id="page-title" >
-      The <w id="identity">Identity</w><br>Transcript
+    <div id="page-title" style="pointer-events: none;">
+      The <w class="identity">Identity</w><br>Transcript
     </div>
   </section>
 
   <!--Sidebar Nav Structure-->
   <section id="sidebar">
-    <div id="sidebar-line-cover"></div>
+    <!--<div id="sidebar-line-cover"></div>-->
     <div id="sidebar-menu-button" style="z-index: 1001;">
-      <a href="#" target="open menu" id="menu-button-link">
-        <object data="./img/menu-icon.svg" width="40%" style="pointer-events: none"></object>
-      </a>
+      <object id="menu-icon" data="./img/menu-icon.svg" width="40%" style="pointer-events: none; opacity: 1;"></object>
+      <object id="close-icon" data="./img/close-icon.svg" width="40%" style="pointer-events: none; opacity: 0;"></object>
     </div>
     <div id="sidebar-menu-items">
       <ul id="sidebar-menu">
@@ -42,7 +41,7 @@
           <a href="#testing-section" class="sidebar-menu-item"><h3>Testing</h3></a>
         </li>
         <li id="sb-menu-4">
-          <a href="#conclusions-section" class="sidebar-menu-item"><h3>Conclusions</h3></a>
+          <a href="#conclusion-section" class="sidebar-menu-item"><h3>Conclusions</h3></a>
         </li>
       </ul>
     </div>
@@ -50,11 +49,32 @@
       <a href="#" target="research paper">
         <object data="./img/paper-icon.svg" width="30%" style="pointer-events: none"></object>
       </a>
-      <a href="#" target="interactive transcript">
-        <object data="./img/interactive-icon.svg" width="30%" style="pointer-events: none;"></object>
+      <a href="#" target="interactive transcript" >
+        <object data="./img/interactive-icon.svg" width="30%" style="pointer-events: none; margin-top:8px;"></object>
       </a>
     </div>
   </section>
+
+  <!--Menu Nav Structure-->
+  <section id="side-menu">
+    <div  id="menu-title">The <w class="identity">Identity</w><br>Transcript</div>
+    <ul>
+      <li>Problem</li>
+      <li>Objectives</li>
+      <li>Design Process</li>
+      <li>Solution Prototype</li>
+      <li>Testing Plan</li>
+      <li>Future Stages</li>
+      <li>Conclusion</li>
+    </ul>
+    <ul style="padding-bottom: 2.5rem;">
+      <li>Thesis Paper</li>
+      <li>Interactive Transcript</li>
+      <li>Project Bibliography</li>
+    </ul>
+  </section>
+
+  <!--Content of Site-->
   <sections id="main-content">
 
     <section id="problem-section" style="color: var(--lt-font-color);">
@@ -62,7 +82,7 @@
       <div class="content-row row">
         <div class="column-2-3 column">
           <h1>The Problem</h1><br>
-          <h2>Risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.</h2>
+          <h2 style="text-align: left;">Risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.</h2>
           <br>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
           <br>
@@ -171,54 +191,54 @@
       <div class="content-row row" style="padding-top: calc(2.5rem + 60px); padding-bottom: 2.5rem;">
         <div class="column" style="width: 100%;">
           
-          <div id="tst-header" class="row0 row" style="width: 100%;">
+          <div id="tst-header" class="row0 row" style="width: 100%; margin-bottom: -40px;">
             <div class="col1 column" style="width: 50%;"></div>
-            <div class="col2 column" style="width: 50%;"><h2>Testing Plan</h2></div>
+            <div class="col2 column" style="width: 50%; padding-left: 2.5%;"><h2>Testing Plan</h2></div>
           </div>
           
-          <div id="tst1" class="row1 row" style="width: 100%;">
+          <div id="tst1" class="row1 row" style="width: 100%; padding-bottom: 20px;">
             <div class="col1 column" style="width: 50%;">
-              <div class="row">
-                <div class="column num" style="width: 25%;">A</div>
+              <div class="row" style="padding: 0 5%; width: 90%">
+                <div id="tst-1" class="column num" style="width: 25%;">A</div>
                 <div class="column" style="width: 75%; top: 80px;">
                   <h1 style="white-space: nowrap;">Students</h1><br>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                 </div>
               </div>
             </div>
-            <div class="col2 column" style="width: 50%;">
+            <div class="col2 column" style="padding: 0 2.5%; width: 47.5%; margin-top: 124px;">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.</p><br>
               <p>Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
             </div>
           </div>
 
-          <div id="tst2" class="row2 row" style="width: 100%;">
+          <div id="tst2" class="row2 row" style="width: 100%; padding-bottom: 20px;">
             <div class="col1 column" style="width: 50%;">
-              <div class="row">
-                <div class="column num" style="width: 25%;">B</div>
+              <div class="row" style="padding: 0 5%; width: 90%">
+                <div id="tst-2" class="column num" style="width: 25%;">B</div>
                 <div class="column" style="width: 75%; top: 80px;">
                   <h1 style="white-space: nowrap;">Parents/Guardians</h1><br>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                 </div>
               </div>
             </div>
-            <div class="col2 column" style="width: 50%;">
+            <div class="col2 column" style="padding: 0 2.5%; width: 47.5%; margin-top: 124px;">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.</p><br>
               <p>Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
             </div>
           </div>
 
-          <div id="tst3" class="row3 row" style="width: 100%;">
+          <div id="tst3" class="row3 row" style="width: 100%; padding-bottom: 20px;">
             <div class="col1 column" style="width: 50%;">
-              <div class="row">
-                <div class="column num" style="width: 25%;">C</div>
+              <div class="row" style="padding: 0 5%; width: 90%">
+                <div id="tst-3" class="column num" style="width: 25%;">C</div>
                 <div class="column" style="width: 75%; top: 80px;">
                   <h1 style="white-space: nowrap;">Admissions Officers</h1><br>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                 </div>
               </div>
             </div>
-            <div class="col2 column" style="width: 50%;">
+            <div class="col2 column" style="padding: 0 2.5%; width: 47.5%; margin-top: 124px;">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.</p><br>
               <p>Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
             </div>
@@ -226,8 +246,78 @@
             
           
         </div>
-        <div class="column" style="width: 50%; padding-right: 25px;">
+      </div>
+    </section>
 
+    <section id="equity-section">
+      <div class="content-row row">
+        <div class="column" style="width: 33.333%;">
+          <h1 style="white-space: nowrap">A Note On Equity</h1>
+        </div>
+        <div class="column" style="width: 66.666%;">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. .</p>
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="plans-section" style="padding: 2vw;">
+      <div id="plans-sheet">
+        <div class="content-row row">
+
+        </div>
+      </div>
+    </section>
+
+    <section id="conclusion-section" style="color: var(--lt-font-color);">
+      
+      <div class="content-row row">
+        <div class="column-2-3 column">
+          <h1>Conclusions & Limitations</h1><br>
+          <h2 style="text-align: left;">Risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.</h2>
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.</p>
+        </div>
+        <div class="column" style="margin-top: 40px;">
+          <img id="header-img" src="./img/footer-img.jpg" alt="A low-angle shot of UX designers rearranging colorful Post-it Notes on a white paper sheet" width="420" height="315">
+        </div>
+        
+      </div>
+
+    </section>
+
+    <section id="acknow-section">
+      <div class="content-row row">
+        <div class="column" style="width: 33.333%;">
+          <h1 style="white-space: nowrap">Acknowledgments</h1>
+        </div>
+        <div class="column" style="width: 66.666%;">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. .</p>
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer-section">
+      <div class="content-row row" style="padding-bottom: 0; padding-top: 30px; justify-content: center;">
+        <ul style="display:flex; flex-direction: row; list-style: none; text-align: center;">
+          <li><a href="#" style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Site Navigation Menu</h3></a></li>
+          <hr style="height: 30%; align-self: center; opacity: 0.5;">
+          <li><a href="#" style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Thesis Paper</h3></a></li>
+          <hr style="height: 30%; align-self: center; opacity: 0.5;">
+          <li><a href="#" style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Interactive Transcript</h3></a></li>
+          <hr style="height: 30%; align-self: center; opacity: 0.5;">
+          <li><a href="#" style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Project Bibliography</h3></a></li>
+        </ul>
+      </div>
+      <div class="content-row row" style="padding-bottom: 40px; padding-top: 5px;">
+        <div class="column">
+          <!--<hr style="color: var(--dk-background-font-color); width: 10%; opacity: 0.5;">-->
+          <p style="text-align:center; font-size: 14px; font-family: adelle-sans-light; opacity: 0.5;">This site represents a portion of my 2022 Duke University Undergraduate Thesis as part of the capstone for my PII academic program, Human-centered Design & Informatics. You can find more of my design work on <a href="https://merrilloshaughnessy.com" style="color:var(--dk-background-font-color); text-decoration: underline;">my portfolio site</a>. &copy; 2022 Merrill O'Shaughnessy</p>
         </div>
       </div>
     </section>
@@ -235,10 +325,6 @@
   </sections>
 </body>
   <script>
-
-    
-    
-    
     gsap.registerPlugin(ScrollTrigger);
 
     const tl = gsap.timeline({
@@ -253,26 +339,49 @@
     })
 
     tl
-    .to('#page-title', {
-          opacity: 0
+    .fromTo('#page-title', {opacity: 1, x: -10, y: 10, z:100}, {
+          opacity: 0,
+          x: 0,
+          y: 0,
+          z: 0
     });
 
-    let menuButton = document.querySelector('#sidebar-menu-button');
-
-    menuButton.addEventListener("mouseenter", () => { 
+    /* menuButton.addEventListener("mouseenter", () => { 
       gsap.to('#page-title', {
         opacity: 1,
-        x: -50,
+        x: -10,
         y: 10
       })
     });
 
     menuButton.addEventListener("mouseleave", () => { 
-      gsap.to('#page-title', {
-        opacity: 0,
-        x: 100,
-        y: -10
-      })
+        gsap.to('#page-title', {
+          opacity: 0,
+          x: 0,
+          y: 0
+        })
+      }); */
+    
+    const tl2 = gsap.timeline({paused: true});
+    const menuButton = document.querySelector('#sidebar-menu-button');
+
+    tl2.add('start')
+       .to('#sidebar', {
+          x: '-40vw',
+          duration: 1.2,
+          ease: "power2"
+       }, 'start')
+       .to('#side-menu', {
+          x: '-40vw',
+          duration: 1.2,
+          ease: "power2"
+       }, 'start')
+       .to('#menu-icon', {opacity: 0, duration: 1,}, 'start')
+       .to('#close-icon', {opacity: 1, duration: 1,}, 'start')
+    
+    
+    menuButton.addEventListener('click', () => {
+      tl2.reversed() ? tl2.play() : tl2.reverse()
     });
 
   </script>

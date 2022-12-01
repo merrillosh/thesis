@@ -29,7 +29,7 @@
 }
 
 .content-row {
-  padding-top: 2.5rem;
+  padding-top: calc(2.5rem + 40px);
 
   padding-left: 7vw;
   padding-right: 7vw;
@@ -155,6 +155,57 @@
 }
 
 #prototype-section {
-  background-color: var(--lt-background-color);
+  background-color: var(--background-color);
   color: var(--med-font-color);
+}
+
+#testing-section {
+  background-color: var(--lt-background-color);
+}
+
+#testing-section .num {
+  font-family: adelle-sans-bold;
+  font-size: 300px;
+  line-height: 300px;
+}
+
+#tst-1 {
+  color: var(--dk-blue);
+}
+
+#tst-2 {
+  color: var(--med-blue);
+}
+
+#tst-3 {
+  color: var(--lt-blue);
+}
+
+#equity-section {
+  background-color: var(--v-dk-background-color);
+  color: var(--dk-background-font-color);
+}
+
+#plans-section {
+  background-color: var(--med-background-color);
+}
+
+#plans-sheet {
+  background-color: var(--background-color);
+}
+
+#acknow-section {
+  background-color: var(--dk-background-color);
+  color: var(--dk-background-font-color);
+}
+
+#footer-section {
+  background-color: var(--v-dk-background-color);
+  color: var(--dk-background-font-color);
+}
+
+#footer-section li {
+  padding: 0 25px;
+  min-width: 120px;
+  white-space: nowrap;
 }
