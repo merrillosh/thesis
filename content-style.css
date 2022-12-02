@@ -135,7 +135,7 @@
 
 .flickity-button {
   background: transparent;
-  color: black;
+  color: #32404F;
   width: 30px;
 }
 
@@ -208,4 +208,8 @@
   padding: 0 25px;
   min-width: 120px;
   white-space: nowrap;
+}
+
+#footer-section h3:hover {
+  color: var(--accent-font-color);
 }

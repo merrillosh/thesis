@@ -25,31 +25,31 @@
   <!--Sidebar Nav Structure-->
   <section id="sidebar">
     <!--<div id="sidebar-line-cover"></div>-->
-    <div id="sidebar-menu-button" style="z-index: 1001;">
+    <div id="sidebar-menu-button" class="pointer" style="z-index: 1001;">
       <object id="menu-icon" data="./img/menu-icon.svg" width="40%" style="pointer-events: none; opacity: 1;"></object>
       <object id="close-icon" data="./img/close-icon.svg" width="40%" style="pointer-events: none; opacity: 0;"></object>
     </div>
     <div id="sidebar-menu-items">
       <ul id="sidebar-menu">
         <li id="sb-menu-1">
-          <a href="#title-section" class="sidebar-menu-item"><h3>Problem</h3></a>
+          <a href="#title-section" class="sidebar-menu-item pointer"><h3>Problem</h3></a>
         </li>
         <li id="sb-menu-2">
-          <a href="#prototype-section" class="sidebar-menu-item"><h3>Prototype</h3></a>
+          <a href="#prototype-section" class="sidebar-menu-item pointer"><h3>Prototype</h3></a>
         </li>
         <li id="sb-menu-3">
-          <a href="#testing-section" class="sidebar-menu-item"><h3>Testing</h3></a>
+          <a href="#testing-section" class="sidebar-menu-item pointer"><h3>Testing</h3></a>
         </li>
         <li id="sb-menu-4">
-          <a href="#conclusion-section" class="sidebar-menu-item"><h3>Conclusions</h3></a>
+          <a href="#conclusion-section" class="sidebar-menu-item pointer"><h3>Conclusions</h3></a>
         </li>
       </ul>
     </div>
     <div id="sidebar-links">
-      <a href="#" target="research paper">
+      <a href="" target="research paper">
         <object data="./img/paper-icon.svg" width="30%" style="pointer-events: none"></object>
       </a>
-      <a href="#" target="interactive transcript" >
+      <a href="" target="interactive transcript" >
         <object data="./img/interactive-icon.svg" width="30%" style="pointer-events: none; margin-top:8px;"></object>
       </a>
     </div>
@@ -57,21 +57,22 @@
 
   <!--Menu Nav Structure-->
   <section id="side-menu">
-    <div  id="menu-title">The <w class="identity">Identity</w><br>Transcript</div>
+    <div id="menu-title">The <w class="identity">Identity</w><br>Transcript</div>
     <ul>
-      <li>Problem</li>
-      <li>Objectives</li>
-      <li>Design Process</li>
-      <li>Solution Prototype</li>
-      <li>Testing Plan</li>
-      <li>Future Stages</li>
-      <li>Conclusion</li>
+      <li><a href="#title-section">Problem</a></li>
+      <li><a href="#objectives-section">Objectives</a></li>
+      <li><a href="#process-section">Design Process</a></li>
+      <li><a href="#prototype-section">Solution Prototype</a></li>
+      <li><a href="#testing-section">Testing Plan</a></li>
+      <li><a href="#equity-section">Statement on Equity</a></li> 
+      <li><a href="#plans-section">Future Stages</a></li>
+      <li><a href="#conclusion-section">Conclusion</a></li>
     </ul>
-    <ul style="padding-bottom: 2.5rem;">
-      <li>Thesis Paper</li>
-      <li>Interactive Transcript</li>
-      <li>Project Bibliography</li>
-    </ul>
+    <!--<ul style="padding-bottom: 2.5rem; padding-top: 2.5rem;">
+      <li style="margin-top: -1px;"><a href=""><h2>Thesis Paper</h2></a></li>
+      <li style="margin-top: 18px;"><a href=""><h2>Interactive Transcript</h2></a></li>
+      <li><a href=""><h2>Project Bibliography</h2></a></li>
+    </ul>-->
   </section>
 
   <!--Content of Site-->
@@ -97,7 +98,7 @@
 
     <section id="objectives-section">
       <div class="full-width-row row">
-        <div class="content-row row" style="padding-bottom: calc(2.5rem + 120px);"> 
+        <div class="content-row row" style="padding-bottom: calc(2.5rem + 120px); padding-top: 2.5rem;"> 
 
           <div id="ob-1" class="column obj" style="width: 33.333%;">
             <div class="row" style="padding-left: 5%; padding-right: 5%; width: 90%;">
@@ -188,7 +189,7 @@
     </section>
 
     <section id="testing-section">
-      <div class="content-row row" style="padding-top: calc(2.5rem + 60px); padding-bottom: 2.5rem;">
+      <div class="content-row row" style="padding-top: calc(2.5rem + 60px); padding-bottom: calc(2.5rem + 40px);">
         <div class="column" style="width: 100%;">
           
           <div id="tst-header" class="row0 row" style="width: 100%; margin-bottom: -40px;">
@@ -305,13 +306,13 @@
     <section id="footer-section">
       <div class="content-row row" style="padding-bottom: 0; padding-top: 30px; justify-content: center;">
         <ul style="display:flex; flex-direction: row; list-style: none; text-align: center;">
-          <li><a href="#" style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Site Navigation Menu</h3></a></li>
+          <li id="footer-menu-button" class="pointer"><a style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Site Navigation Menu</h3></a></li>
           <hr style="height: 30%; align-self: center; opacity: 0.5;">
-          <li><a href="#" style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Thesis Paper</h3></a></li>
+          <li><a href="" style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Thesis Paper</h3></a></li>
           <hr style="height: 30%; align-self: center; opacity: 0.5;">
-          <li><a href="#" style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Interactive Transcript</h3></a></li>
+          <li><a href="" style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Interactive Transcript</h3></a></li>
           <hr style="height: 30%; align-self: center; opacity: 0.5;">
-          <li><a href="#" style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Project Bibliography</h3></a></li>
+          <li><a href="" style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Project Bibliography</h3></a></li>
         </ul>
       </div>
       <div class="content-row row" style="padding-bottom: 40px; padding-top: 5px;">
@@ -364,6 +365,7 @@
     
     const tl2 = gsap.timeline({paused: true});
     const menuButton = document.querySelector('#sidebar-menu-button');
+    const menuFooter = document.querySelector('#footer-menu-button');
 
     tl2.add('start')
        .to('#sidebar', {
@@ -381,6 +383,10 @@
     
     
     menuButton.addEventListener('click', () => {
+      tl2.reversed() ? tl2.play() : tl2.reverse()
+    });
+
+    menuFooter.addEventListener('click', () => {
       tl2.reversed() ? tl2.play() : tl2.reverse()
     });
 

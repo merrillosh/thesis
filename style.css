@@ -120,6 +120,10 @@ a:after {
   color: var(--med-font-color);
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 /* Main Nav & Content Styling */
 
 .sections {
@@ -213,6 +217,7 @@ a:after {
   border-bottom: 1px solid rgba(50, 64, 79, 0.5);
 
   vertical-align: middle;
+  width:100%;
 }
 
 #sidebar-menu-items {
@@ -246,6 +251,7 @@ a:after {
   height: 8vw;
 
   align-items: center;
+  justify-content: center;
 }
 
 #sidebar-menu > li {
@@ -297,6 +303,7 @@ a:after {
 
   align-items: center;
   vertical-align: middle;
+
 }
 
 #close-icon {
@@ -338,6 +345,7 @@ a:after {
 
 #side-menu ul {
   padding-top: 20px;
+  padding-bottom: 20px;
   list-style: none;
   text-align: left;
 
@@ -348,6 +356,7 @@ a:after {
 
 #side-menu li {
   text-align: left;
+  padding-top: 15px;
 }
 
 #menu-title {
@@ -449,7 +458,7 @@ a:after {
     border-bottom: none;
     position: fixed;
     top: 2vh;
-    right: calc(4vw - 23px);
+    margin-right: calc(4vw - 23px);
   }
 
   #sidebar-links {
