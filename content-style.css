@@ -3,7 +3,6 @@
   width: 92vw;
   left: 0;
   margin-right: 8vw;
-  padding-top: 10vh;
   min-width: 900px;
 
   background-color: var(--background-color);
@@ -56,6 +55,20 @@
 }
 
 /* Problem Section */
+#hero-background {
+  background-image: radial-gradient(circle 50vw at bottom right, #043297, #061B2B);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
+
+#problem-section {
+  padding-top: 10vh;
+  background-color: var(--background-color);
+  
+  color:  black;
+  margin-right: -8vw;
+}
 
 .column-2-3 {
   padding-left: 0;
@@ -157,6 +170,15 @@
 #prototype-section {
   background-color: var(--background-color);
   color: var(--med-font-color);
+}
+
+.annotation hr {
+  height: 300px; 
+  border-color: var(--dk-background-font-color); 
+  transform-origin: left bottom;
+  -webkit-transform-origin: left bottom;
+  transform: rotate(90deg) translateX(-100%);
+  -webkit-transform:rotate(90deg) translateX(-100%);
 }
 
 #testing-section {

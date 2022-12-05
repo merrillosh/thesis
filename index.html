@@ -78,7 +78,7 @@
   <!--Content of Site-->
   <sections id="main-content">
 
-    <section id="problem-section" style="color: var(--lt-font-color);">
+    <section id="problem-section">
       
       <div class="content-row row">
         <div class="column-2-3 column">
@@ -195,6 +195,13 @@
           <img src="./img/design.png" style="margin-top: 40px">
         </div>
       </div>
+      <div id="annotations">
+        <div id="ann1" class="annotation row">
+          <hr id="ann1line">
+          <p style="font-size: smaller; width: 400px;">Annotation of prototype feature goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.</p>
+        </div>
+      </div>
+      
     
     </section>
 
@@ -350,11 +357,12 @@
     })
 
     tl
-    .fromTo('#page-title', {opacity: 1, x: -10, y: 10, z:100}, {
+    .fromTo('#page-title', {opacity: 1, x: -10, y: 10, z:100, letterSpacing: 2, }, {
           opacity: 0,
           x: 0,
           y: 0,
-          z: 0
+          z: 0,
+          letterSpacing: 5
     });
 
     /* menuButton.addEventListener("mouseenter", () => { 

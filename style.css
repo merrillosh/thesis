@@ -424,12 +424,12 @@ a:after {
   --lt-font-color: #555555;
   --med-font-color: #32404F;
   --dk-font-color: #000000;
-  --accent-font-color: #A0CBE8;
+  --accent-font-color: #2151FE;
   --dk-background-font-color: #FFF;
 
-  --lt-blue: #5EAFC0;
-  --med-blue: #3992B0;
-  --dk-blue: #32759A;
+  --lt-blue: #2151FE;
+  --med-blue: #2151FE;
+  --dk-blue: #2151FE;
 }
 
 /* Breakpoints */
