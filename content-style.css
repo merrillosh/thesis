@@ -38,13 +38,13 @@
   flex: 0 0 auto;
   flex-basis: 78vw;
 
-  padding-bottom: calc(2.5rem + 50px);
+  padding-bottom: calc(2.5rem + 40px);
 }
 
 .full-width-row {
   padding-top: 0rem;
 
-  padding-left: 0px;
+  padding-left: 0;
   margin-right: 0;
   width: 92vw;
   max-width: 1920px;
@@ -55,18 +55,18 @@
 }
 
 /* Problem Section */
-#hero-background {
-  background-image: radial-gradient(circle 50vw at bottom right, #043297, #061B2B);
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
+#hero {
+  width:1800px;
+  height: auto;
+  visibility:hidden;
 }
 
+
 #problem-section {
-  padding-top: 10vh;
+  padding-top: 95vh;
   background-color: var(--background-color);
   
-  color:  black;
+  color:  var(--dk-font-color);
   margin-right: -8vw;
 }
 
@@ -114,18 +114,39 @@
 }
 
 #obj-1 {
-  color: var(--dk-blue);
+  color: var(--background-color); 
+  -webkit-text-fill-color: var(--background-color); 
+
 }
 
 #obj-2 {
-  color: var(--med-blue);
+  color: var(--background-color); 
+  -webkit-text-fill-color: var(--background-color); 
+
 }
 
 #obj-3 {
-  color: var(--lt-blue);
+  color: var(--background-color); 
+  -webkit-text-fill-color: var(--background-color); 
+ 
 }
 
 /* Process Section */
+
+#duke-quote {
+  font-family: 'druk-wide-super', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--dk-font-color);
+  font-size: 50px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+.quote-credit {
+  color: var(--dk-font-color);
+  text-align: center;
+}
+
 
 .photo-frame {
   padding: 0 0;
@@ -133,6 +154,15 @@
 }
 
 /* carousel */
+
+#process-section {
+  color: var(--dk-background-font-color);
+}
+
+.caption {
+  color: var(--dk-background-font-color); 
+}
+
 
 .carousel-cell {
   /* aspect ratio: 1920 x 1309 */
@@ -148,7 +178,7 @@
 
 .flickity-button {
   background: transparent;
-  color: #32404F;
+  color: var(--dk-font-color);
   width: 30px;
 }
 
@@ -169,7 +199,26 @@
 
 #prototype-section {
   background-color: var(--background-color);
-  color: var(--med-font-color);
+  color: var(--dk-font-color);
+}
+
+#proto {
+  width: 100%;
+  height: 100%;
+}
+
+#proto-frame {
+  width: calc(88vw + 120px); 
+  height:  calc((88vw + 120px) * (1024/1440) + 96px);
+  margin-left: calc(-60px);
+  padding-left: 2vw;
+  margin-right: calc(-60px + 10vw);
+  padding-right: 10vw;
+  margin-top: -80px;
+  margin-bottom: -80px;
+}
+
+canvas {
 }
 
 .annotation hr {
@@ -192,19 +241,19 @@
 }
 
 #tst-1 {
-  color: var(--dk-blue);
+  color: var(--background-color);
 }
 
 #tst-2 {
-  color: var(--med-blue);
+  color: var(--background-color);
 }
 
 #tst-3 {
-  color: var(--lt-blue);
+  color: var(--background-color);
 }
 
 #equity-section {
-  background-color: var(--v-dk-background-color);
+  background-color: var(--dk-background-color);
   color: var(--dk-background-font-color);
 }
 
@@ -212,8 +261,29 @@
   background-color: var(--med-background-color);
 }
 
+#conclusion-section ul{
+  font-family: 'GT-America-lt', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
+
+}
+
 #plans-sheet {
   background-color: var(--background-color);
+}
+
+#func-att ul {
+  font-family: 'GT-America-lt', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
+  padding-top: 20px;
+  list-style: disc;
+}
+
+#func-att li {
+  padding-bottom: 15px;
 }
 
 #acknow-section {

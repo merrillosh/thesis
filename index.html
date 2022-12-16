@@ -8,17 +8,187 @@
   <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-  <script src="script.js"></script> 
+  <script type="text/javascript" async="" src="script.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="flickity.css" media="screen">
   <script src="flickity.pkgd.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="content-style.css">
-  <style></style>
+  <style>
+    #hero {
+      left:1vw;
+      top: 0;
+      height: 95vh;
+      width: 90vw;
+      max-width: none;
+      position: absolute;
+      background: url('./img/transcript-background.png') no-repeat;
+
+      background-size: cover;
+      background-position: center;
+      transform: translateZ(0px);
+      -moz-transform: translateZ(0px);
+      -webkit-transform: translateZ(0px);
+    }
+    
+    #hero-img {
+      position: absolute;
+      left:0;
+      top:0;
+      margin-left: 0;
+      margin-top: 0;
+      height: 100%;
+      width: 100%;
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      background: url('./img/transcript-middleground.png') no-repeat;
+      background-size: contain;
+      background-position: center;
+      transform: translateZ(0px);
+      -moz-transform: translateZ(0px);
+      -webkit-transform: translateZ(0px);
+    }
+
+    .bottom {
+      outline: 1px solid transparent;
+      height: 100%;
+      width: 100%;
+      background: url('./img/transcript-foreground2.png') no-repeat;
+      background-size: contain;
+      background-position: center;
+      position: absolute;
+      transform: translateZ(30px);
+      -moz-transform: translateZ(30px);
+      -webkit-transform: translateZ(30px);
+      bottom: 0;
+      left: 0;
+    }
+
+    .middle {
+      outline: 1px solid transparent;
+      height: 100%;
+      width: 100%;
+      background: url('./img/transcript-foreground-middle.png') no-repeat;
+      background-size: contain;
+      background-position: center;
+      position: absolute;
+      transform: translateZ(45px);
+      -moz-transform: translateZ(45px);
+      -webkit-transform: translateZ(45px);
+      bottom: 0;
+      left: 0;
+    }
+
+    .top {
+      outline: 1px solid transparent;
+      height: 100%;
+      width: 100%;
+      background: url('./img/transcript-foreground1.png') no-repeat;
+      background-size: contain;
+      background-position: center;
+      position: absolute;
+      transform: translateZ(60px);
+      -moz-transform: translateZ(60px);
+      -webkit-transform: translateZ(60px);
+      bottom: 0;
+      left: 0;
+    }
+
+    #foot {
+      left:1vw;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      max-width: none;
+      position: absolute;
+      background: url('./img/layer5.png') no-repeat;
+
+      background-size: cover;
+      background-position: center;
+      transform: translateZ(0px);
+      -moz-transform: translateZ(0px);
+      -webkit-transform: translateZ(0px);
+    }
+    
+    #foot-img {
+      position: absolute;
+      left:0;
+      top:0;
+      margin-left: 0;
+      margin-top: 0;
+      height: 100%;
+      width: 100%;
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      background: url('./img/layer4.png') no-repeat;
+      background-size: contain;
+      background-position: center;
+      transform: translateZ(0px);
+      -moz-transform: translateZ(0px);
+      -webkit-transform: translateZ(0px);
+    }
+
+    .layer3 {
+      outline: 1px solid transparent;
+      height: 100%;
+      width: 100%;
+      background: url('./img/layer3.png') no-repeat;
+      background-size: contain;
+      background-position: center;
+      position: absolute;
+      transform: translateZ(30px);
+      -moz-transform: translateZ(30px);
+      -webkit-transform: translateZ(30px);
+      bottom: 0;
+      left: 0;
+    }
+
+    .layer2 {
+      outline: 1px solid transparent;
+      height: 100%;
+      width: 100%;
+      background: url('./img/layer2.png') no-repeat;
+      background-size: contain;
+      background-position: center;
+      position: absolute;
+      transform: translateZ(45px);
+      -moz-transform: translateZ(45px);
+      -webkit-transform: translateZ(45px);
+      bottom: 0;
+      left: 0;
+    }
+
+    .layer1 {
+      outline: 1px solid transparent;
+      height: 100%;
+      width: 100%;
+      background: url('./img/layer1.png') no-repeat;
+      background-size: contain;
+      background-position: center;
+      position: absolute;
+      transform: translateZ(60px);
+      -moz-transform: translateZ(60px);
+      -webkit-transform: translateZ(60px);
+      bottom: 0;
+      left: 0;
+    }
+
+  </style>
 </head>
 <body>
   <section id="title-section">
-    <div id="page-title" style="pointer-events: none;">
+    <!--<div id="page-title" style="pointer-events: none;">
       The <w class="identity">Identity</w><br>Transcript
+    </div>-->
+    <div id="page-name" style="pointer-events: none;  text-transform: uppercase; width: 90vw; margin-left: 1vw; margin-bottom: 1vh;">
+      <w class="the">The</w><br><w class="id-t">Identity</w><br><w class="id-t">Transcript</w>
+    </div>
+    <div class="header">
+       <div class="header-text" style="text-align:left">Duke University</div>
+       <div class="header-text" style="text-align:center">Undergraduate Thesis</div>
+       <div class="header-text" style="text-align:right">December 2022</div>
     </div>
   </section>
 
@@ -46,10 +216,10 @@
       </ul>
     </div>
     <div id="sidebar-links">
-      <a href="" target="research paper">
+      <a href="./PII Thesis Final.pdf" target="_blank">
         <object data="./img/paper-icon.svg" width="30%" style="pointer-events: none"></object>
       </a>
-      <a href="" target="interactive transcript" >
+      <a href="https://www.figma.com/proto/TtAIyEFCA85gT8omwqfKve/Untitled?page-id=0%3A1&node-id=1%3A275&viewport=348%2C351%2C0.14&scaling=scale-down&starting-point-node-id=1%3A275&hide-ui=1" target="_blank">
         <object data="./img/interactive-icon.svg" width="30%" style="pointer-events: none; margin-top:8px;"></object>
       </a>
     </div>
@@ -61,7 +231,7 @@
     <ul>
       <li><a href="#title-section">Problem</a></li>
       <li><a href="#objectives-section">Objectives</a></li>
-      <li><a href="#process-section">Design Process</a></li>
+      <li><a href="#process-row">Design Process</a></li>
       <li><a href="#prototype-section">Solution Prototype</a></li>
       <li><a href="#testing-section">Testing Plan</a></li>
       <li><a href="#equity-section">Statement on Equity</a></li> 
@@ -78,34 +248,44 @@
   <!--Content of Site-->
   <sections id="main-content">
 
+    <section id="hero">
+      <div id="hero-img">
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
+      </div>
+    </section>
+
+
     <section id="problem-section">
-      
+
       <div class="content-row row">
-        <div class="column-2-3 column">
+        <div class="column">
           <h1>The Problem</h1><br>
-          <h2 style="text-align: left;">Risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.</h2>
+          <h2 style="text-align: left;">How transcripts can counteract the influence of digital grade portals on U.S. high schools</h2>
           <br>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+          <p>The last few years have seen the rapid spread of digital grade portals in U.S. high schools, but research on the efficacy of constant access to students' grades remains mixed. There is some evidence that grade portals help keep students accountable and parents informed, improving students' academic performance overall. However, with parents able to constantly evaluate and respond to their child's perceived academic performance, learners are stripped of some level of control over their education.</p><br>
+
+          <p>This project focuses on the power of digital grade representations to tackle these issues of agency. Transcripts serve as a central document for conveying academic performance to students, parents, teachers, admissions officers, and other stakeholders. By altering the way grades are presented in transcripts, can we counteract the perspective encouraged by online grade portals? How and to what degree can the structure of a transcript build learner self-representation and self-advocacy, for all students irrespective of their families' abilities to navigate digital spaces? This project suggests ways to expand upon how grades are presented in order to better incorporate student voices without altering current grading and teaching models.</p>
           <br>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.</p>
         </div>
-        <div class="column" style="margin-top: 40px;">
+        <!--<div class="column" style="margin-top: 40px;">
           <img id="header-img" src="./img/header-img.jpg" alt="an overhead view of students or employees working on their laptops, snacking, and texting at a large table" width="420" height="315">
-        </div>
+        </div>-->
       </div>
 
     </section>
 
     <section id="objectives-section">
-      <div class="full-width-row row">
-        <div class="content-row row" style="padding-bottom: calc(2.5rem + 120px); padding-top: 2.5rem;"> 
+      <div class="full-width-row row" style="padding-bottom: calc(2rem + 100px); padding-top: 2rem;">
+        <div class="content-row row" style="padding-bottom: calc(2rem); padding-top: 2rem;"> 
 
           <div id="ob-1" class="column obj" style="width: 33.333%;">
             <div class="row" style="padding-left: 5%; padding-right: 5%; width: 90%;">
               <div id="obj-1" class="column num" style="width: 25%;">1</div>
               <div class="column" style="width: 75%; top: 80px;">
-                <h1 style="white-space: nowrap;">Identity</h1><br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                <h1 style="white-space: nowrap;">Development</h1><br>
+                <p>Opportunities for academic self-reflection are crucial to students' development. Participation in the curation of their own transcripts provides students with the tools and space to interpret experiences from inside and outside of the classroom that have influenced their learning. Our transcript should support students as they develop an integrative narrative of self.</p>
               </div>
             </div>
           </div>
@@ -114,8 +294,8 @@
             <div class="row" style="padding-left: 5%; padding-right: 5%; width: 90%;">
               <div id="obj-2" class="column num" style="width: 25%;">2</div>
               <div class="column" style="width: 75%; top: 80px;">
-                <h1 style="white-space: nowrap;">Authenticity</h1><br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                <h1 style="white-space: nowrap;">Compatibility</h1><br>
+                <p>Transcripts that are designed to capture a complete and authentic picture of each student's academic growth have the potential to improve student-university 'fit'. Our transcript should offer students a variety of ways to communicate their academic performance, thus helping universities to select students who have the values, skills, attitudes, or perspectives they are seeking.
               </div>
             </div>
           </div>
@@ -125,7 +305,7 @@
               <div id="obj-3" class="column num" style="width: 25%;">3</div>
               <div class="column" style="width: 75%; top: 80px;">
                 <h1 style="white-space: nowrap;">Efficiency</h1><br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                <p>With only minutes to read each application, admissions officers could benefit from a curatorial design that directs their attention to students' most important courses and activities. However, evaluators may sometimes require more traditional academic metrics. Our transcript must accomodate both of these needs while maintaining the reliability expected of an official transcript. </p>
               </div>
             </div>
           </div>
@@ -135,11 +315,17 @@
     </section>
 
     <section id="process-section" style="color: var(--lt-font-color);">
-     
-      <div class="content-row row" style="padding-top: calc(2.5rem + 60px); padding-bottom: 2.5rem;">
+      
+      <div class="content-row row" style="padding-top: calc(2.5rem + 60px); padding-bottom: calc(2.5rem + 60px);">
+        <div class="column">
+          <h1 id="duke-quote">“We're looking for students who </h1><h1 class="id-t" id="duke-quote">have a voice, take initiative, and go after their interests”</h1><h1 class="header-text" style="text-align: center; width:100%; padding-top: 20px; color: black;">Christoph Guttentag, Head of Duke Undergraduate Admissions</h1>
+        </div>
+      </div>
+
+      <!--<div class="content-row row" style="padding-top: calc(2.5rem); padding-bottom: 2.5rem;">
         <div class="column">
           <h1>Personas</h1><br>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.</h2>
+          <h2>We developed two different high school student personas to capture the variety of needs and challenges facing potential users of our redesigned transcript. These personas informed the design choices made while developing the final prototype.</h2>
             <div class="row" style="padding-top: 0; margin-top: 40px; display: block;">
               <div class="photo-frame" style="background-color: white; width: calc(78vw);">
                 <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": false}'>
@@ -149,56 +335,63 @@
                   <div class="carousel-cell">
                     <img src="./img/personas2.png">
                   </div>
-                  <!--<div class="carousel-cell">
-                    <img src="../img/personas3.png">s
-                  </div>-->
-                  <!--<div class="carousel-cell">
-                    <img src=".../img/personas4.png">
-                  </div>-->
                 </div>
               </div>
             </div>
         </div>
-      </div>
+      </div>-->
 
-      <div class="content-row row" style="padding-top: calc(2.5rem)">
+      <div class="content-row row" id="process-row" style="padding-top: calc(2.5rem + 30px); background-color: var(--dk-background-color); color:var(--dk-background-font-color)">
         <div class="column" style="float:right; text-align: right;">
           <h1>Preliminary Prototypes</h1><br>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.</h2>
+          <p>After determining the objectives of the transcript design, we began the process of iteratively prototyping potential transcript designs with different models for representing students' journeys, each with their own benefits and weaknesses. <a href="./PII Thesis Final.pdf" target="_blank" style="color: var(--accent-font-color);">You can see more early prototypes and read an in-depth analysis of our design choices here &rarr;</a></p>
             <div class="row">
               <div class="column" style="width: 100%; margin-top: 40px;">
                 <img src="./img/prototypes1.png">
-                <p class="caption" style="text-align: right; font-size: smaller;">Photo caption goes here</p>
+                <p class="caption" style="text-align: right;">Three views of the "Vertical Timeline" Prototype</p>
               </div>
             </div>
-            <div class="row" style="margin-top:10px;">
+            <div class="row" style="margin-top:20px;">
               <div class="column" style="width: calc(33% - 6px);">
                 <img src="./img/prototypes2.png" style="border: 1px solid #F6F6F6">
-                <p class="caption" style="text-align: right; font-size: smaller;">Photo caption goes here</p>
+                <p class="caption" style="text-align: right;">"Card View" Prototype</p>
               </div>
               <div class="column" style="width: calc(66% + 5px); margin-left: 15px">
-                <figure style="margin: 0; background-color: #F6F6F6; padding-bottom: 3px; padding-top: 3px; border: 1px solid #F6F6F6">
+                <figure style="margin: 0; background-color: #F6F6F6; padding-bottom: 4px; padding-top: 4px; border: 1px solid #F6F6F6">
                   <video type="video/mp4" autoplay="autoplay" muted="muted" loop="loop" playsinline="" src="./img/prototypes3.mp4" style="width: 100%; height: 100%; object-fit: fill;">
                   </video>
                 </figure>
-                <p class="caption" style="text-align: right; font-size: smaller;">Photo caption goes here</p>
+                <p class="caption" style="text-align: right;">Interaction with the Gannt chart style prototype</p>
               </div>
             </div>
         </div>
       </div>
     </section>
 
-    <section id="prototype-section" style="background-color: var(--dk-background-color); color: var(--dk-background-font-color)">
-      <div class="content-row row" style="padding-top: calc(2.5rem + 30px); padding-bottom: calc(2.5rem + 30px);">
-        <div class="column" style="width: 110%; margin-left: -5%">
-          <h1>Final Design</h1>
-          <img src="./img/design.png" style="margin-top: 40px">
+    <section id="prototype-section">
+      <div class="row full-width-row" style="padding-top: calc(2.5rem + 60px);">
+        <div class="column" style="width: 100%;">
+          <h1 style="padding-left: 7vw; padding-right: 7vw;">Final Design</h1><br>
+          <p style="padding-left: 7vw; padding-right: 7vw; margin-bottom: -48px; z-index: 4; padding-bottom: 15px;">You can try toggling between the student-curated view of the transcript and the traditional view on the interactive prototype below. Please note, placing your mouse within the prototype will allow you to scroll the prototype, and placing your mouse anywhere on the page outside of the prototype will allow you to scroll the page. <a href="https://www.figma.com/proto/TtAIyEFCA85gT8omwqfKve/Untitled?page-id=0%3A1&node-id=1%3A275&viewport=348%2C351%2C0.14&scaling=scale-down&starting-point-node-id=1%3A275&hide-ui=1" target="_blank"  style="color: var(--accent-font-color);">Click here to open the interactive prototype in full screen &rarr;</a></p>
+          <div style="width: 100%; height: 80px; background-color: var(--background-color); z-index: 3;"></div>
+          <div id="proto-frame"><iframe id="proto" style="border: none; z-index: 0" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FRrZeamMLWtr6676VxrutJW%2FTranscript-Wireframes%3Fpage-id%3D0%253A1%26node-id%3D155%253A4422%26viewport%3D-2545%252C30%252C0.13%26scaling%3Dscale-down%26starting-point-node-id%3D155%253A4422%26hide-ui%3D1" allowfullscreen></iframe></div>
+          <div style="width: 100%; height: 80px; background-color: var(--background-color); z-index: 3;"></div>
         </div>
       </div>
-      <div id="annotations">
-        <div id="ann1" class="annotation row">
-          <hr id="ann1line">
-          <p style="font-size: smaller; width: 400px;">Annotation of prototype feature goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.</p>
+      <div id="annotations" class="row content-row" style="padding-top: calc(2.5rem - 30px)">
+        <div id="func-att" class="column">
+          <h1>Functional Attributes</h1>
+          <ul>
+            <li><b>Toggle view</b> - Using this switch, the user can view either the default/student-curated view which includes the classes a student has identified as central to their academic journey, relevant extra-curricular activities, other information regarding their student experience, and a more traditional transcript view which includes a complete list of courses and the grades they received with no supplementary materials</li>
+            <li><b>Student statement</b> - This short blurb offers student's the opportunity to freely describe themselves as a student or otherwise speak to their academic experience. Its placement on the left-hand side of the transcript encourages evaluators to read it first and use it as a frame, shaping their understanding of the rest of the transcript.</li> 
+            <li><b>Evaluator assistance</b> - These buttons make it easy for users&mdash;students, parents, educators, and admissions officers&mdash;to learn more about the document. Recording data regarding their usage will also allow us to recognize and improve areas of confusion.</li>
+            <li><b>Counselor verification & approval</b> - Each student's list of courses and grades is automatically fed into this transcript from school records, just like a traditional transcript, but this feature allows schools to provide verification of the other information included in the student-curated portion of the transcript.</li>
+            <li><b>Chronological scrolling structure</b> - As this transcript is intentionally designed to reflect students' self-narratives, courses are ordered chronologically and grouped by year with sub-groupings by subject. This means that by reading from left to right, a user gets a sense of how students progressed and developed in their interests over their four years of high school as well as how they plan to continue doing so in the future (the transcript shown here includes semester grades from left to right, but this is easily adapted to schools that use a trimester or quarter system.)</li>
+            <li><b>Activity labeling</b> - Students have the ability to group and label their experiences&mdash;examples include “classes”, “clubs”, and “personal projects”&mdash;making the curated view extremely inclusive. Students also have the ability to name and alter the subject groupings of their classes.For example, from a students perspective math and science courses could appear as one category labeled “S.T.E.M.” even if their school doesn't use the same categorizations.</li>
+            <li><b>Selective info regarding courses</b> - While the traditional transcript view includes all courses and grades a student receives, in the curated view students can highlight different aspects of their courses by selecting what information to show (or omit) from their transcript. For example, this student has included their grades for AP statistics but not for Honors Algebra 2. Allowing students to determine whether they'd like to highlight their participation, improvement, performance, growth, work, or other qualities encourages them to see the benefits of classes beyond good grades.</li> 
+            <li><b>Course-level color coding</b> - Each course is color-coded by level to give the transcript's viewer a visual overview of the areas in which a student improved or pursued more challenging courses. In this example, a reader can quickly see the change from dark blue, to teal, to red in the areas associated with science, math, and the arts, providing an instant sense of both what opportunities a student took advantage of and what areas they explored in greater depth.</li>
+            <li><b>Multimedia evidence</b> - Allowing students to include a variety of written and visual supplements promotes a broad view of the value of educational experiences beyond hyper fixation of grades. For example, a student who showed resiliance in a course that personally challenged them may wish to submit a statement of support from their teacher or a student who participated in an art class outside of their high school might benefit from showing the work they produced during the course. Allowing students to demonstrate their learning in many different ways encourages students to focus on more than achieving the highest possible grade and it offers admissions officers a fuller picture of student achievement.</li> 
+          </ul>
         </div>
       </div>
       
@@ -270,12 +463,15 @@
     <section id="equity-section">
       <div class="content-row row">
         <div class="column" style="width: 33.333%;">
-          <h1 style="white-space: nowrap">A Note On Equity</h1>
+          <h1>A Note On Equity<br>& Accessibility</h1>
         </div>
         <div class="column" style="width: 66.666%;">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. .</p>
+          <p>While not the central goal of this project, in order to be deemed successful our transcript design must minimize inequities in how students see themselves, depict themselves, and are evaluated. A successful design should mitigate some concerns with how students are currently evaluated by colleges and other institutions after graduation, primarily by allowing a wider range of experiences to be represented. Additionally, any interfaces for transcript creation must be usable for all students regardless of ability.
+          </p>
           <br>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.</p>
+          <p>
+          To ensure that these standards are met, the finished transcript design must meet all <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" style="color:var(--accent-font-color)">Web Content Accessibility Guidelines as set by the W3C</a>. Further testing will be needed to ensure that the redesigned transcript does not disproportionally impact students' admissions negatively or in a way that increases current inequities in college education.
+            </p>
         </div>
       </div>
     </section>
@@ -292,15 +488,27 @@
       
       <div class="content-row row">
         <div class="column-2-3 column">
-          <h1>Conclusions & Limitations</h1><br>
-          <h2 style="text-align: left;">Risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.</h2>
+          <h1 style="text-align: left;">Recommendations for Future Development</h1><br>
+          <h2 style="text-align: left;">Resources and strategies for launching a redesigned transcript on a larger scale</h2>
           <br>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+          <p>The above testing plan should provide enough evidence of the efficacy of our redesigned high school transcript to justify a small pilot program, allowing real schools to begin using and submitting the transcript to college admissions departments. However, it is only the beginning of the required testing for implementing such a large-scale project. The three stages of testing outlined above focus largely on the experience of individual users with creating and reading the transcript but once the transcript is launched, further stages of assessment will need to be developed focusing on the impacts of this new approach to reporting students' academic performance at a systems level.</p>
           <br>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.</p>
+          <p>In addition to further assessments, the plan for launching the redesigned transcript will require further development after the design has been finalized. In order to be successful, any changes to a process as high stakes as college admissions will require deep buy-in both from both students and their parents and university admissions departments. To achieve the level of credibility required to instill trust in all stakeholders, there are several paths we could explore:
+          </p>
+          <ul>
+            <li>Seeking the endorsement of a high-profile educational organization such as the National Educational Association</li>
+            <li>Partnering with a small group of highschools to promote and collect data on the results of using the transcript</li>
+            <li>Applying for grant money to incentivize university involvement in further research</li>
+          </ul>
         </div>
         <div class="column" style="margin-top: 40px;">
-          <img id="header-img" src="./img/footer-img.jpg" alt="A low-angle shot of UX designers rearranging colorful Post-it Notes on a white paper sheet" width="420" height="315">
+          <div id="foot">
+          <div id="foot-img">
+            <div class="layer1"></div>
+            <div class="layer2"></div>
+            <div class="layer3"></div>
+          </div>
+          </div>
         </div>
         
       </div>
@@ -313,29 +521,29 @@
           <h1 style="white-space: nowrap">Acknowledgments</h1>
         </div>
         <div class="column" style="width: 66.666%;">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. .</p>
+          <p>I'd like to thank UX designer Dr. Angela Zoss from Duke Libraries and Eric Monson from the Center for Data and Visualization Sciences for providing advice and feedback during the prototyping stage of this project as well as Christoph Guttentag and Milan Hamilton from Duke's Undergraduate Admissions Office for taking time out of their busy schedules to offer their invaluable insights.</p>
           <br>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.</p>
+          <p>Most importantly, I want to thank my advisor, Dr. Jennifer Hill, for taking on this independent study course, encouraging me to explore a challenging new topic, and having the most interesting (sometimes on-topic) conversations with me all semester long.</p>
         </div>
       </div>
     </section>
 
-    <section id="footer-section">
+    <section id="footer-section" style="background-color: black;">
       <div class="content-row row" style="padding-bottom: 0; padding-top: 30px; justify-content: center;">
         <ul style="display:flex; flex-direction: row; list-style: none; text-align: center;">
           <li id="footer-menu-button" class="pointer"><a style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Site Navigation Menu</h3></a></li>
           <hr style="height: 30%; align-self: center; opacity: 0.5;">
-          <li><a href="" style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Thesis Paper</h3></a></li>
+          <li><a href="./PII Thesis Final.pdf" target="_blank"  style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Thesis Paper</h3></a></li>
           <hr style="height: 30%; align-self: center; opacity: 0.5;">
-          <li><a href="" style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Interactive Transcript</h3></a></li>
-          <hr style="height: 30%; align-self: center; opacity: 0.5;">
-          <li><a href="" style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Project Bibliography</h3></a></li>
+          <li><a href="https://www.figma.com/proto/TtAIyEFCA85gT8omwqfKve/Untitled?page-id=0%3A1&node-id=1%3A275&viewport=348%2C351%2C0.14&scaling=scale-down&starting-point-node-id=1%3A275&hide-ui=1" target="_blank"  style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Interactive Transcript</h3></a></li>
+          <!--<hr style="height: 30%; align-self: center; opacity: 0.5;">
+          <li><a href="" style="color:var(--dk-background-font-color)"><h3 style="font-family: adelle-sans-regular;">Project Bibliography</h3></a></li>-->
         </ul>
       </div>
       <div class="content-row row" style="padding-bottom: 40px; padding-top: 5px;">
         <div class="column">
           <!--<hr style="color: var(--dk-background-font-color); width: 10%; opacity: 0.5;">-->
-          <p style="text-align:center; font-size: 14px; font-family: adelle-sans-light; opacity: 0.5;">This site represents a portion of my 2022 Duke University Undergraduate Thesis as part of the capstone for my PII academic program, Human-centered Design & Informatics. You can find more of my design work on <a href="https://merrilloshaughnessy.com" style="color:var(--dk-background-font-color); text-decoration: underline;">my portfolio site</a>. &copy; 2022 Merrill O'Shaughnessy</p>
+          <p style="text-align:center; font-size: 14px; opacity: 0.5;">This site represents a portion of my 2022 Duke University Undergraduate Thesis as part of the capstone for my PII academic program, Human-centered Design & Informatics. You can find more of my design work on <a href="https://merrilloshaughnessy.com" style="color:var(--dk-background-font-color); text-decoration: underline;">my portfolio site</a>. &copy; 2022 Merrill O'Shaughnessy</p>
         </div>
       </div>
     </section>
@@ -365,21 +573,17 @@
           letterSpacing: 5
     });
 
-    /* menuButton.addEventListener("mouseenter", () => { 
-      gsap.to('#page-title', {
-        opacity: 1,
-        x: -10,
-        y: 10
-      })
+   
+    $(document).ready(function(){
+      $(window).on("load", function(){
+          window.requestAnimationFrame(function() {
+            const tl4 = gsap.timeline()
+            tl4.from("#hero", 1, {y:100, duration: 10, autoAlpha:0})
+            
+          });
+      });
     });
-
-    menuButton.addEventListener("mouseleave", () => { 
-        gsap.to('#page-title', {
-          opacity: 0,
-          x: 0,
-          y: 0
-        })
-      }); */
+ 
     
     const tl2 = gsap.timeline({paused: true, reversed:true});
     const menuButton = document.querySelector('#sidebar-menu-button');
@@ -407,6 +611,52 @@
     menuFooter.addEventListener('click', () => {
       tl2.reversed() ? tl2.play() : tl2.reverse()
     });
+
+    $(document).ready(function() {
+
+
+var request = null;
+var mouse = {
+  x: 0,
+  y: 0
+};
+var cx = window.innerWidth / 2;
+var cy = window.innerHeight / 2;
+
+$('body').mousemove(function(event) {
+
+  mouse.x = event.pageX;
+  mouse.y = event.pageY;
+
+  cancelAnimationFrame(request);
+  request = requestAnimationFrame(update);
+});
+
+function update() {
+
+  dx = mouse.x - cx;
+  dy = mouse.y - cy;
+
+  tiltx = (dy / cy);
+  tilty = -(dx / cx);
+  radius = Math.sqrt(Math.pow(tiltx, 2) + Math.pow(tilty, 2));
+  degree = (radius * 18);
+  TweenLite.to("#hero-img", 1, {
+    transform: 'rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)',
+    ease: Power2.easeOut
+  });
+  TweenLite.to("#foot-img", 1, {
+    transform: 'rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)',
+    ease: Power2.easeOut
+  });
+}
+
+$(window).resize(function() {
+  cx = window.innerWidth / 2;
+  cy = window.innerHeight / 2;
+});
+});
+
 
   </script>
 </html>

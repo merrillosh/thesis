@@ -43,7 +43,7 @@
 /* HTML & Body Setup */
 
 html {
-  background-color: var(--lt-background-color);
+  background-color: var(--background-color);
   scroll-behavior: smooth;
 }
 
@@ -54,9 +54,15 @@ body {
   font-family: adelle-sans-light, Arial, sans-serif;
   color: var(--dk-font-color);
   background-color: var(--background-color);
+  
   margin: 0;
   padding: 0;
+  top: 0;
+  left:0;
+  width: 100%;
+  height:100%;
 }
+
 
 body, html {
   font-size: 18px;
@@ -78,37 +84,40 @@ span, p, h1, h2, h3, .section, div {
 }
 
 h1 {
-  font-family: clearface-std-heavy;
-  font-size: 38px;
+  font-family: "GT-America-exp-bold", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 900;
   line-height: 20px;
   letter-spacing: .02em;
 }
 
 h2 {
-  font-family: adelle-sans-light;
-  font-size: 18px;
+  font-family: 'GT-America-ext', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 13px;
   line-height: 20px;
   letter-spacing: .04em;
   text-transform: uppercase;
 }
 
 h3 {
-  font-family: adelle-sans-light;
-  font-size: calc(10px + 0.2rem);
-  line-height: 18px;
+  font-family: 'GT-America-ext';
+  font-size: 13px;
+  line-height: 14px;
   letter-spacing: .11em;
   text-transform: uppercase;
 }
 
 p {
-  font-family: adelle-sans-regular;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 4%;
+  font-family: 'GT-America-lt', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
+
 }
 
 a {
-  color: var(--med-font-color);
+  color: var(--dk-font-color);
   text-decoration: none;
 }
 
@@ -117,11 +126,17 @@ a:hover{
 }
 
 a:after {
-  color: var(--med-font-color);
+  color: var(--dk-font-color);
 }
 
 .pointer {
   cursor: pointer;
+}
+
+b {
+  font-family: 'GT-America-ext-bold', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 /* Main Nav & Content Styling */
@@ -154,15 +169,61 @@ a:after {
   z-index: 8;
 }
 
+#page-name {
+  margin-right: 8vw;
+  font-family: "druk-wide-super";
+  color: var(--dk-font-color);
+  font-size: 60px;
+  line-height: 55px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4px;
+  margin-top: 20px;
+  z-index: 8;
+  margin-bottom: 50px;
+  padding-right: 1vw;
+}
+
+.the {
+  font-family: "GT-America-exp-bold";
+  font-size: 20px;
+  line-height: 18px;
+}
+
+.id-t {
+  -webkit-text-fill-color: var(--background-color); 
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: black;
+}
+
+.header-text {
+  font-family: "GT-America-exp-bold";
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 14px;
+
+  width: calc(90vw / 3);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 90vw;
+  margin-left: 1vw;
+  margin-top: 60px;
+  margin-bottom: 5px;
+}
+
 .identity {
   font-family: adelle-sans-bold;
   letter-spacing: 0.02em;
 }
 
 #sidebar {
-  position: fixed;
+  position: fixed !important;
   top: 0;
-  right: 0px;
+  right: 0;
   bottom: 0;
 
   display: flex;
@@ -196,7 +257,7 @@ a:after {
   content: "";
   display: block;
   opacity: 0.5;
-  width: 1px;
+  width: 1.2px;
 }
 
 #sidebar:after {
@@ -208,13 +269,13 @@ a:after {
   content: "";
   display: block;
   opacity: 0.5;
-  width: 1px;
+  width: 1.2px;
 }
 
 #sidebar-menu-button {
   min-height: 60px;
   margin-bottom: 3vh;
-  border-bottom: 1px solid rgba(50, 64, 79, 0.5);
+  border-bottom: 1.2px solid rgba(0,0,0, 0.5);
 
   vertical-align: middle;
   width:100%;
@@ -276,7 +337,7 @@ a:after {
   margin-top: 2vh;
   padding-top: 2vh;
   padding-bottom: 2vh;
-  border-top: 1px solid rgba(50, 64, 79, 0.5);
+  border-top: 1.2px solid rgba(0,0,0, 0.5);
 }
 
 #sidebar object {
@@ -325,8 +386,7 @@ a:after {
 #side-menu {
   width: 40vw;
   height: 100vh;
-  background-color: rgba(255, 255,  255, 0.9);
-  color: var(--med-font-color);
+  background-color: rgba(255, 252, 246, 0.9);
   text-align: left;
   
   position: fixed;
@@ -334,11 +394,13 @@ a:after {
   left: 100vw;
   z-index: 8;
 
-  font-family: clearface-std-heavy;
-  color: var(--med-font-color);
-  font-size: 38px;
-  line-height: 45px;
+  font-family: "GT-America-exp-bold", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 50px;
   letter-spacing: .02em;
+  color: var(--dk-font-color);
 
   overflow-y: scroll;
 }
@@ -360,7 +422,7 @@ a:after {
 }
 
 #menu-title {
-  font-family: adelle-sans-light;
+  font-family: "druk-super-wide";
   color: var(--med-font-color);
   font-size: 22px;
   line-height: 22px;
@@ -374,15 +436,7 @@ a:after {
   z-index: 11;
 }
 
-
 /* Font Imports */
-
-@font-face {
-  font-family: "adelle-sans-light";
-  src: url("fonts/Adelle\ Sans\ W04\ Light.woff") format("woff"),
-  url("fonts/Adelle\ Sans\ W04\ Light.woff2") format("woff2"),
-  url("fonts/Adelle\ Sans\ W04\ Light.ttf") format("truetype");
-}
 
 @font-face {
   font-family: "adelle-sans-regular";
@@ -399,37 +453,48 @@ a:after {
 }
 
 @font-face {
-  font-family: "clearface-std-regular";
-  src: url("fonts/ClearfaceStd-Regular.woff") format("woff"),
-  url("fonts/ClearfaceStd-Regular.woff2") format("woff2"),
-  url("fonts/ClearfaceStd-Regular.ttf") format("truetype");
+  font-family: "druk-wide-super";
+  src:
+  url("fonts/DrukWide-Super.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "clearface-std-heavy";
-  src: url("fonts/ClearfaceStd-Heavy.woff") format("woff"),
-  url("fonts/ClearfaceStd-Heavy.woff2") format("woff2"),
-  url("fonts/ClearfaceStd-Heavy.ttf") format("truetype");
+  font-family: "GT-America-exp-bold";
+  src:
+  url("fonts/GT-America-Expanded-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "GT-America-ext";
+  src:
+  url("fonts/GT-America-Extended-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "GT-America-lt";
+  src:
+  url("fonts/GT-America-Standard-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "GT-America-ext-bold";
+  src:
+  url("fonts/GT-America-Extended-Bold.otf") format("opentype");
 }
 
 /* Color Vb. Declarations */
 
 :root {
-  --background-color: #FFF;
-  --lt-background-color: #F8F8F8;
-  --med-background-color: #E6E6E6;
-  --dk-background-color: #32404F;
-  --v-dk-background-color: #2A3643;
+  --background-color: #FFFCF6;
+  --lt-background-color: #EEE4DE;
+  --dk-background-color: #433E44;
+  --v-dk-background-color: #433E44;
 
-  --lt-font-color: #555555;
-  --med-font-color: #32404F;
+  --lt-font-color: #433E44;
+  --med-font-color: #000000;
   --dk-font-color: #000000;
-  --accent-font-color: #2151FE;
-  --dk-background-font-color: #FFF;
-
-  --lt-blue: #2151FE;
-  --med-blue: #2151FE;
-  --dk-blue: #2151FE;
+  --accent-font-color: #9E96C8;
+  --dk-background-font-color: #FFFCF6;
 }
 
 /* Breakpoints */
@@ -467,4 +532,25 @@ a:after {
   }
   
 
+}
+
+@media screen and (min-width: 1300px) {
+  #page-name {
+    font-size: 60px;
+    line-height: 55px;
+  }
+
+  .id-t {
+    -webkit-text-stroke-width: 1.2px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #acknow-section > .row {
+    flex-direction: column;
+  }
+
+  #acknow-section > .row h1 {
+    padding-bottom: 30px;
+  }
 }
