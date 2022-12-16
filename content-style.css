@@ -218,9 +218,6 @@
   margin-bottom: -80px;
 }
 
-canvas {
-}
-
 .annotation hr {
   height: 300px; 
   border-color: var(--dk-background-font-color); 
